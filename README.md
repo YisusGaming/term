@@ -18,7 +18,7 @@
 > <!> This guide assumes that your project contains a csproj file.
 ## 1. Setup
 
-<span style="font-size: 1.4rem;">**First**</span>, you have to download the `Term.dll` from the **lastest** realease.
+<span style="font-size: 1.4rem;">**First**</span>, you have to download the `Term.dll` from the **latest** realease.
 
 > <!> You can also `git clone` this repository and **compile** it yourself using:
 > ```bash
