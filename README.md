@@ -9,12 +9,12 @@
 **Term** is a simple interpreter that can convert key-value pairs defined in text to C# dictionaries.
 
 ***You can find here:***
-1. [Setup](#1-setup)
-2. [Docs](#docs)
-3. [Features coming soon](#coming-soon)
-4. [License](#license)
+- [License](#license)
 
-# Getting Started
+----------
+
+<h1 align="center">Getting Started</h1>
+
 > <!> This guide assumes that your project contains a csproj file.
 ## 1. Setup
 
@@ -45,9 +45,9 @@ That's it! You've successfully finished the setup. Continue in the [docs](#docs)
 
 > Any problems during the setup? **Check the setup guide again**. Still have problems? Post an **issue** so I can help you!
 
-<div style="display: flex; justify-content: center;">
-    <h1 id="docs">Docs</h1>
-</div>
+----------
+
+<h1 align="center" id="docs">Docs</h1>
 
 Jump to the [example](#example).
 
@@ -82,7 +82,7 @@ The interpreter itself.
 
 ----------
 
-## Term's syntax
+<h1 align="center">Term's syntax</h1>
 
 1. ### Comments
    Comments in `Term` are really simple.
@@ -217,12 +217,11 @@ namespace MyProgram
 
 ----------
 
-# Coming soon
-1. New Features like `writing` into `Term` files.
+<h1 align="center">Coming soon</h1>
 
-2. **In the docs:** New info like Deveploment setup.
+1. Arithmethic operations in `Term` values.
 
 ----------
 
-# License
+<h1 align="center">License</h1>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Term</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">YisusGaming</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
