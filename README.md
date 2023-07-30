@@ -6,7 +6,7 @@
     <h3>Save configs in text files and use them in C#!</h3>
 </div>
 
-**Term** is a simle interpreter that can convert key-value pairs defined in text to C# dictionaries.
+**Term** is a simple interpreter that can convert key-value pairs defined in text to C# dictionaries.
 
 ***You can find here:***
 1. [Setup](#1-setup)
@@ -108,11 +108,10 @@ The interpreter itself.
 
    It's important that these `configs` are declared on a **single line**, otherwhise it can cause errors.
 
-   `string` values don't need to be surrounded by `""`.
-
 ### Important aspects:
    1. Any empty line found in the `Term` file is going to be ignored by the `Interpreter`.
-   2. The keys name should be using `snake_case`.
+   2. The keys should be named using `snake_case`.
+   3. `string` values don't need to be surrounded by `""`.
 
 ----------
 
@@ -165,7 +164,7 @@ In my case, It will be something like this:
 ```csharp
 string path = Path.GetFullPath("test.term");
 ```
-> Note: This is inside of the `C#`'s `Main` method.
+> Note: This is inside of `C#`'s `Main` method.
 
 We call `Path.GetFullPath` and we pass in the path to our `Term` file, relative to the project's folder.
 > <!> Remember: The file structure in this example is like [this](#file-structure).
