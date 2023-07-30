@@ -9,6 +9,10 @@
 **Term** is a simple interpreter that can convert key-value pairs defined in text to C# dictionaries.
 
 ***You can find here:***
+- [Setup](#1-setup)
+- [Docs](#docs)
+- [Term's Syntax](#syntax)
+- [Features coming soon](#coming-soon)
 - [License](#license)
 
 ----------
@@ -47,7 +51,7 @@ That's it! You've successfully finished the setup. Continue in the [docs](#docs)
 
 ----------
 
-<h1 align="center" id="docs">Docs</h1>
+<h1 id="docs" align="center" id="docs">Docs</h1>
 
 Jump to the [example](#example).
 
@@ -82,7 +86,7 @@ The interpreter itself.
 
 ----------
 
-<h1 align="center">Term's syntax</h1>
+<h1 id="syntax" align="center">Term's syntax</h1>
 
 1. ### Comments
    Comments in `Term` are really simple.
@@ -217,11 +221,11 @@ namespace MyProgram
 
 ----------
 
-<h1 align="center">Coming soon</h1>
+<h1 id="coming-soon" align="center">Coming soon</h1>
 
 1. Arithmethic operations in `Term` values.
 
 ----------
 
-<h1 align="center">License</h1>
+<h1 id="license" align="center">License</h1>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Term</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">YisusGaming</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
