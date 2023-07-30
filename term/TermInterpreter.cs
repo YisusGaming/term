@@ -33,4 +33,31 @@ public static class TermInterpreter
         }
         return result;
     }
+
+    public static void WriteToFile(string path, Dictionary<string, string> termContent, bool replaceContent = true)
+    {
+        if (!File.Exists(path))
+        {
+            throw new FileNotFoundException("File " + path + " does not exist.");
+        }
+
+        string fileContent = File.ReadAllText(path);
+        string newData = "";
+
+        foreach (string key in termContent.Keys)
+        {
+            string keyFormat = key.Trim().ToLower().Replace(' ', '_');
+
+            newData += keyFormat + " -> " + termContent[key] + "\n";
+        }
+
+        if (replaceContent)
+        {
+            File.WriteAllText(path, newData, System.Text.Encoding.UTF8);
+        } 
+        else
+        {
+            File.AppendAllText(path, "\n\n# Written from C#:\n" + newData, System.Text.Encoding.UTF8);
+        }
+    }
 }
