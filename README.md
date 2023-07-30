@@ -84,6 +84,29 @@ The interpreter itself.
         ```
         A dictionary containing the keys and values that were found in the file.
 
+<br/><br/>
+
+2. ```csharp
+    public static void WriteToFile(string path, Dictionary<string, string>  termContent, bool replaceContent = true)
+    ```
+    Writes a `dictionary` into a term file.
+
+    It automatically generates `Term configs`
+    based on the dictionary provided.
+
+    The method will also format correctly any key in
+    the dictionary.
+    So if the dictionary contains a key named
+    "`My Key`" it will be formatted to 
+    "`my_key`" before writing
+    it to the file.
+
+    1. ### Parameters:
+       1. `path`<br/>**Type**: `string`<br/>Description: The absolute path to the term file to write into.
+       2. `termContent`<br/>**Type**: `Dictionary<string, string>`<br/>Description: The content that will be written in the file.
+       3. `replaceContent`<br/>**Type**: `bool`<br/>Description: If `true`, replace all the contents in the term file.<br/><br/> if `false`, append all the contents to the end of the file with a comment "`# Written from C#:`".<br/><br/>This parameter is optional. Defaults to `true`.
+    
+
 ----------
 
 <h1 id="syntax" align="center">Term's syntax</h1>
