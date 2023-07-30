@@ -5,17 +5,15 @@ namespace Term;
 public static class TermInterpreter
 {
 
-    /**
-        <summary>
-            Interpret a TERM config file.
-        </summary>
-        <param name="path">
-            The path to the file that will be interpreted.
-        </param>
-        <returns>
-            A Dictionary containing the keys and values in the interpreted file.
-        </returns>
-    */
+    /// <summary>
+    ///     Interpret a TERM config file.
+    /// </summary>
+    /// <param name="path">
+    ///    The path to the file that will be interpreted.
+    /// </param>
+    /// <returns>
+    ///    A Dictionary containing the keys and values in the interpreted file.
+    /// </returns>
     public static Dictionary<string, string> Interpret(string path)
     {
         Dictionary<string, string> result = new Dictionary<string, string>();
