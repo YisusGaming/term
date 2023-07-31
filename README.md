@@ -24,14 +24,12 @@
 > <!> This guide assumes that your project contains a csproj file.
 ## 1. Setup
 
-<span style="font-size: 1.4rem;">**First**</span>, you have to download the `Term.dll` from the **latest** release.
+<span style="font-size: 1.4rem;">**First**</span>, you have to download the `Term.zip` zip file from the **latest** release.
+Once it's downloaded, unzip it.
 
-> <!> You can also `git clone` this repository and **compile** it yourself using:
-> ```bash
-> dotnet build --configuration Release
-> ```
+> There's also another method you could use, see it [here](https://github.com/YisusGaming/term/wiki#getting-started).
 
-When you're ready, copy `Term.dll` to your project.
+Once you have the unzipped folder, place it inside your project.
 
 <span style="font-size: 1.4rem;">**Next**</span>, you have to add a **reference** to the file `(Term.dll)`.
 
