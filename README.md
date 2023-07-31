@@ -22,7 +22,7 @@
 > <!> This guide assumes that your project contains a csproj file.
 ## 1. Setup
 
-<span style="font-size: 1.4rem;">**First**</span>, you have to download the `Term.dll` from the **latest** realease.
+<span style="font-size: 1.4rem;">**First**</span>, you have to download the `Term.dll` from the **latest** release.
 
 > <!> You can also `git clone` this repository and **compile** it yourself using:
 > ```bash
@@ -126,14 +126,14 @@ The interpreter itself.
 
    A `config` is how we call these key-value pairs in `Term`.
 
-   The key is separeted from the value by this symbol: `->`
+   The key is separated from the value by this symbol: `->`
 
    Example:
    ```term
    my_key -> My value
    ```
 
-   It's important that these `configs` are declared on a **single line**, otherwhise it can cause errors.
+   It's important that these `configs` are declared on a **single line**, otherwise it can cause errors.
 
 ### Important aspects:
    1. Any empty line found in the `Term` file is going to be ignored by the `Interpreter`.
@@ -174,7 +174,7 @@ Project Folder
     | test.term
     | project.csproj
 ```
-> Note: `test.term` is the name I gived to the file.
+> Note: `test.term` is the name I gave to the file.
 
 Ok, let's go into the `Program.cs`.
 
@@ -236,7 +236,7 @@ namespace MyProgram
 }
 ```
 ## Important notes
-1. You may get errors by trying to accessing a keys that isn't in the returned dictionary. This can happend for reasons like the key being not defined at the term file.
+1. You may get errors by trying to accessing a keys that isn't in the returned dictionary. This can happen for reasons like the key being not defined at the term file.
 
     You can manage these errors as you want.
 
@@ -246,7 +246,7 @@ namespace MyProgram
 
 <h1 id="coming-soon" align="center">Coming soon</h1>
 
-1. Arithmethic operations in `Term` values.
+1. Arithmetic operations in `Term` values.
 
 ----------
 
