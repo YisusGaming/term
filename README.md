@@ -1,3 +1,5 @@
+[![build](https://github.com/YisusGaming/term/actions/workflows/integrate.yml/badge.svg)](https://github.com/YisusGaming/term/actions/workflows/integrate.yml)
+
 <div align="center">
     <img style="" src="./assets/Term.png" alt="TERM" height="150"></img>
 </div>
