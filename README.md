@@ -1,8 +1,8 @@
-<div style="display: flex; justify-content: space-around;">
+<div align="center">
     <img style="" src="./assets/Term.png" alt="TERM" height="150"></img>
 </div>
 
-<div style="display: flex; justify-content: space-around;">
+<div align="center">
     <h3>Save configs in text files and use them in C#!</h3>
 </div>
 
