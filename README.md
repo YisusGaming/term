@@ -1,24 +1,28 @@
-<div style="display: flex; justify-content: space-around;">
+<div align="center">
     <img style="" src="./assets/Term.png" alt="TERM" height="150"></img>
 </div>
 
-<div style="display: flex; justify-content: space-around;">
+<div align="center">
     <h3>Save configs in text files and use them in C#!</h3>
 </div>
 
-**Term** is a simle interpreter that can convert key-value pairs defined in text to C# dictionaries.
+**Term** is a simple interpreter that can convert key-value pairs defined in text to C# dictionaries.
 
 ***You can find here:***
-1. [Setup](#1-setup)
-2. [Docs](#docs)
-3. [Features coming soon](#coming-soon)
-4. [License](#license)
+- [Setup](#1-setup)
+- [Docs](#docs)
+- [Term's Syntax](#syntax)
+- [Features coming soon](#coming-soon)
+- [License](#license)
 
-# Getting Started
+----------
+
+<h1 align="center">Getting Started</h1>
+
 > <!> This guide assumes that your project contains a csproj file.
 ## 1. Setup
 
-<span style="font-size: 1.4rem;">**First**</span>, you have to download the `Term.dll` from the **latest** realease.
+<span style="font-size: 1.4rem;">**First**</span>, you have to download the `Term.dll` from the **latest** release.
 
 > <!> You can also `git clone` this repository and **compile** it yourself using:
 > ```bash
@@ -45,9 +49,9 @@ That's it! You've successfully finished the setup. Continue in the [docs](#docs)
 
 > Any problems during the setup? **Check the setup guide again**. Still have problems? Post an **issue** so I can help you!
 
-<div style="display: flex; justify-content: center;">
-    <h1 id="docs">Docs</h1>
-</div>
+----------
+
+<h1 id="docs" align="center" id="docs">Docs</h1>
 
 Jump to the [example](#example).
 
@@ -80,9 +84,32 @@ The interpreter itself.
         ```
         A dictionary containing the keys and values that were found in the file.
 
+<br/><br/>
+
+2. ```csharp
+    public static void WriteToFile(string path, Dictionary<string, string>  termContent, bool replaceContent = true)
+    ```
+    Writes a `dictionary` into a term file.
+
+    It automatically generates `Term configs`
+    based on the dictionary provided.
+
+    The method will also format correctly any key in
+    the dictionary.
+    So if the dictionary contains a key named
+    "`My Key`" it will be formatted to 
+    "`my_key`" before writing
+    it to the file.
+
+    1. ### Parameters:
+       1. `path`<br/>**Type**: `string`<br/>Description: The absolute path to the term file to write into.
+       2. `termContent`<br/>**Type**: `Dictionary<string, string>`<br/>Description: The content that will be written in the file.
+       3. `replaceContent`<br/>**Type**: `bool`<br/>Description: If `true`, replace all the contents in the term file.<br/><br/> if `false`, append all the contents to the end of the file with a comment "`# Written from C#:`".<br/><br/>This parameter is optional. Defaults to `true`.
+    
+
 ----------
 
-## Term's syntax
+<h1 id="syntax" align="center">Term's syntax</h1>
 
 1. ### Comments
    Comments in `Term` are really simple.
@@ -99,20 +126,19 @@ The interpreter itself.
 
    A `config` is how we call these key-value pairs in `Term`.
 
-   The key is separeted from the value by this symbol: `->`
+   The key is separated from the value by this symbol: `->`
 
    Example:
    ```term
    my_key -> My value
    ```
 
-   It's important that these `configs` are declared on a **single line**, otherwhise it can cause errors.
-
-   `string` values don't need to be surrounded by `""`.
+   It's important that these `configs` are declared on a **single line**, otherwise it can cause errors.
 
 ### Important aspects:
    1. Any empty line found in the `Term` file is going to be ignored by the `Interpreter`.
-   2. The keys name should be using `snake_case`.
+   2. The keys should be named using `snake_case`.
+   3. `string` values don't need to be surrounded by `""`.
 
 ----------
 
@@ -148,7 +174,7 @@ Project Folder
     | test.term
     | project.csproj
 ```
-> Note: `test.term` is the name I gived to the file.
+> Note: `test.term` is the name I gave to the file.
 
 Ok, let's go into the `Program.cs`.
 
@@ -165,7 +191,7 @@ In my case, It will be something like this:
 ```csharp
 string path = Path.GetFullPath("test.term");
 ```
-> Note: This is inside of the `C#`'s `Main` method.
+> Note: This is inside of `C#`'s `Main` method.
 
 We call `Path.GetFullPath` and we pass in the path to our `Term` file, relative to the project's folder.
 > <!> Remember: The file structure in this example is like [this](#file-structure).
@@ -210,7 +236,7 @@ namespace MyProgram
 }
 ```
 ## Important notes
-1. You may get errors by trying to accessing a keys that isn't in the returned dictionary. This can happend for reasons like the key being not defined at the term file.
+1. You may get errors by trying to accessing a keys that isn't in the returned dictionary. This can happen for reasons like the key being not defined at the term file.
 
     You can manage these errors as you want.
 
@@ -218,12 +244,11 @@ namespace MyProgram
 
 ----------
 
-# Coming soon
-1. New Features like `writing` into `Term` files.
+<h1 id="coming-soon" align="center">Coming soon</h1>
 
-2. **In the docs:** New info like Deveploment setup.
+1. Arithmetic operations in `Term` values.
 
 ----------
 
-# License
+<h1 id="license" align="center">License</h1>
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Term</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">YisusGaming</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
