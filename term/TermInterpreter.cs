@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Collections.Generic;
+using TermLib;
 
 namespace Term;
 public static class TermInterpreter
@@ -36,6 +37,7 @@ public static class TermInterpreter
             property = line.Split("->");
             if (property[0] != null && property[1] != null)
             {
+                TermMaths.RunArithmetics(property[1]);
                 result.TryAdd(property[0].Trim(), property[1].Trim());
             }
         }
@@ -80,7 +82,6 @@ public static class TermInterpreter
             throw new FileNotFoundException("File " + path + " does not exist.");
         }
 
-        string fileContent = File.ReadAllText(path);
         string newData = "";
 
         foreach (string key in termContent.Keys)

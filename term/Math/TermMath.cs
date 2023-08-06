@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System;
 
 namespace TermLib;
 
@@ -6,23 +6,23 @@ public static class TermMaths
 {
     public enum ArithmeticOperators
     {
-        ADDITION,
-        SUBSTRACTION,
-        MULTIPLICATION,
-        DIVISION
+        ADDITION = '+',
+        SUBSTRACTION = '-',
+        MULTIPLICATION = '*',
+        DIVISION = '/',
+
+        /// <summary>
+        ///  This is not an operator, this is just a variant to be
+        /// if a property didn't match any of the above.
+        /// </summary>
+        INVALID
     }
 
-    /// <summary>
-    ///     Creates a dictionary mapping symbols to values in <c>ArithmeticOperators</c>
-    /// </summary>
-    public static Dictionary<string, ArithmeticOperators> ArithmeticMap()
+    public static void RunArithmetics(string property)
     {
-        Dictionary<string, ArithmeticOperators> map = new();
-        map.TryAdd("+", ArithmeticOperators.ADDITION);
-        map.TryAdd("-", ArithmeticOperators.SUBSTRACTION);
-        map.TryAdd("*", ArithmeticOperators.MULTIPLICATION);
-        map.TryAdd("/", ArithmeticOperators.DIVISION);
-
-        return map;
+        if (property.Contains((char) ArithmeticOperators.ADDITION))
+        {
+            Console.WriteLine(property);
+        }
     }
 }
