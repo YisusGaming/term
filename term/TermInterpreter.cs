@@ -5,6 +5,25 @@ namespace Term;
 public static class TermInterpreter
 {
 
+    private enum ArithmeticOperators
+    {
+        ADDITION,
+        SUBSTRACTION,
+        MULTIPLICATION,
+        DIVISION
+    }
+
+    private static Dictionary<string, ArithmeticOperators> ArithmeticMap()
+    {
+        Dictionary<string, ArithmeticOperators> map = new();
+        map.TryAdd("+", ArithmeticOperators.ADDITION);
+        map.TryAdd("-", ArithmeticOperators.SUBSTRACTION);
+        map.TryAdd("*", ArithmeticOperators.MULTIPLICATION);
+        map.TryAdd("/", ArithmeticOperators.DIVISION);
+
+        return map;
+    }
+
     /// <summary>
     ///     Interpret a TERM config file.
     /// </summary>
@@ -25,7 +44,7 @@ public static class TermInterpreter
             throw new FileNotFoundException("File " + path + " does not exist.");
         }
 
-        Dictionary<string, string> result = new Dictionary<string, string>();
+        Dictionary<string, string> result = new();
         
         string[] lines = File.ReadAllLines(path);
         for (int i = 0; i < lines.Length; i++)
