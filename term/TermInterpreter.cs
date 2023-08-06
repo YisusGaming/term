@@ -4,26 +4,6 @@ using System.Collections.Generic;
 namespace Term;
 public static class TermInterpreter
 {
-
-    private enum ArithmeticOperators
-    {
-        ADDITION,
-        SUBSTRACTION,
-        MULTIPLICATION,
-        DIVISION
-    }
-
-    private static Dictionary<string, ArithmeticOperators> ArithmeticMap()
-    {
-        Dictionary<string, ArithmeticOperators> map = new();
-        map.TryAdd("+", ArithmeticOperators.ADDITION);
-        map.TryAdd("-", ArithmeticOperators.SUBSTRACTION);
-        map.TryAdd("*", ArithmeticOperators.MULTIPLICATION);
-        map.TryAdd("/", ArithmeticOperators.DIVISION);
-
-        return map;
-    }
-
     /// <summary>
     ///     Interpret a TERM config file.
     /// </summary>
