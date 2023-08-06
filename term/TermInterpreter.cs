@@ -14,8 +14,17 @@ public static class TermInterpreter
     /// <returns>
     ///    A Dictionary containing the keys and values in the interpreted file.
     /// </returns>
+    /// <exception cref="FileNotFoundException">
+    ///     Thrown when the file specified by <paramref name="path"/>
+    ///     is not found.
+    /// </exception>
     public static Dictionary<string, string> Interpret(string path)
     {
+
+        if (!File.Exists(path)) {
+            throw new FileNotFoundException("File " + path + " does not exist.");
+        }
+
         Dictionary<string, string> result = new Dictionary<string, string>();
         
         string[] lines = File.ReadAllLines(path);
@@ -61,6 +70,10 @@ public static class TermInterpreter
     ///     the end of the file with a comment
     ///     "<see langword="# Written from C#: " />"
     /// </param>
+    /// <exception cref="FileNotFoundException">
+    ///     Thrown when the file specified by <paramref name="path"/>
+    ///     is not found.
+    /// </exception>
     public static void WriteToFile(string path, Dictionary<string, string> termContent, bool replaceContent = true)
     {
         if (!File.Exists(path))
