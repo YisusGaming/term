@@ -1,6 +1,7 @@
 ﻿using System.IO;
 using System.Collections.Generic;
 using TermLib;
+using System;
 
 namespace Term;
 public static class TermInterpreter
@@ -37,8 +38,8 @@ public static class TermInterpreter
             property = line.Split("->");
             if (property[0] != null && property[1] != null)
             {
-                TermMaths.RunArithmetics(property[1]);
-                result.TryAdd(property[0].Trim(), property[1].Trim());
+                float? arithmeticResult  = TermMaths.RunArithmetics(property[1]);
+                result.TryAdd(property[0].Trim(), arithmeticResult.ToString() ?? property[1].Trim());
             }
         }
         return result;
