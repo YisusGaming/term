@@ -4,7 +4,7 @@ namespace TermLib;
 
 public static class FaultHandler
 {
-    public readonly static EventHandler<TermFault> FaultEvent;
+    public static EventHandler<TermFault>? FaultEvent;
 
     /// <summary>
     ///     Raises a fault to the interpreter.
