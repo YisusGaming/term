@@ -1,5 +1,8 @@
 namespace TermLib;
 
+/// <summary>
+///     Thrown when an arithmetic operation in a Term value fails.
+/// </summary>
 [System.Serializable]
 public class ArithmeticFaultException : System.Exception
 {
