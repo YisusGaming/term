@@ -38,8 +38,16 @@ public static class TermInterpreter
             property = line.Split("->");
             if (property[0] != null && property[1] != null)
             {
-                float? arithmeticResult  = TermMaths.RunArithmetics(property[1]);
-                result.TryAdd(property[0].Trim(), arithmeticResult.ToString() ?? property[1].Trim());
+                string? arithmeticResult = TermMaths.RunArithmetics(property[0], property[1]).ToString();
+                if (arithmeticResult != "" && arithmeticResult != null)
+                {
+                    result.TryAdd(property[0].Trim(), arithmeticResult);
+                }
+                else
+                {
+                    result.TryAdd(property[0].Trim(), property[1].Trim());
+                }
+                
             }
         }
         return result;
