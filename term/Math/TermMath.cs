@@ -18,11 +18,11 @@ public static class TermMaths
         INVALID
     }
 
-    public static float? RunArithmetics(string property)
+    public static float? RunArithmetics(string config, string value)
     {
-        if (property.Contains((char) ArithmeticOperators.ADDITION))
+        if (value.Contains((char) ArithmeticOperators.ADDITION))
         {
-            string[] addition = property.Split((char) ArithmeticOperators.ADDITION);
+            string[] addition = value.Split((char) ArithmeticOperators.ADDITION);
             try
             {
                 float x1 = Convert.ToSingle(addition[0].Trim());
@@ -32,7 +32,7 @@ public static class TermMaths
             }
             catch (Exception exception)
             {
-                throw new ArithmeticFaultException(exception.Message, exception);
+                throw new ArithmeticFaultException(exception.Message + "\nAt config: " + config.Trim() + "\nAt value: " + value.Trim(), exception);
             }
         }
 
